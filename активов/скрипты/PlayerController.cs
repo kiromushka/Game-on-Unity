@@ -23,7 +23,7 @@ public class PlayerController : MonoBehaviour {
     }
 
 	void OnTriggerEnter (Collider other) {
-		if (other.tag == "Cube")
+		if ((other.tag == "Cube")||(other.tag == "Capsule")||(other.tag == "Cylinder"))
 			Destroy (other.gameObject);
 	}
 }
